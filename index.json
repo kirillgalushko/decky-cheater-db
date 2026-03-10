@@ -1,0 +1,13 @@
+{
+  "games": [
+    {
+      "id": "kingdom-come-deliverance",
+      "title": "Kingdom Come Deliverance",
+      "executables": [
+        "KingdomCome.exe"
+      ],
+      "steam_appid": "379430",
+      "meta_path": "games/kingdom-come-deliverance/meta.json"
+    }
+  ]
+}

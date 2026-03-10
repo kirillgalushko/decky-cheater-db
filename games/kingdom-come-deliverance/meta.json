@@ -1,0 +1,14 @@
+{
+  "id": "kingdom-come-deliverance",
+  "title": "Kingdom Come Deliverance",
+  "executables": [
+    "KingdomCome.exe"
+  ],
+  "steam_appid": "379430",
+  "exe_hashes": [],
+  "tables": [
+    {
+      "path": "cheats.ct"
+    }
+  ]
+}

@@ -18,6 +18,18 @@ function writeJson(filePath, data) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2) + "\n");
 }
 
+function findCtFiles(gameDir) {
+  const files = fs.readdirSync(gameDir, { withFileTypes: true });
+  const out = [];
+  for (const f of files) {
+    if (!f.isFile()) continue;
+    if (f.name.toLowerCase().endsWith(".ct")) {
+      out.push(f.name);
+    }
+  }
+  return out;
+}
+
 function main() {
   if (!fs.existsSync(GAMES_DIR)) {
     console.error("games/ directory not found");
@@ -38,6 +50,17 @@ function main() {
       console.error(`meta.json id mismatch in ${gameId}`);
       process.exit(1);
     }
+
+    const ctFiles = findCtFiles(path.join(GAMES_DIR, gameId));
+    const tables = Array.isArray(meta.tables) ? meta.tables : [];
+    const known = new Set(tables.map((t) => t.path).filter(Boolean));
+    for (const file of ctFiles) {
+      if (!known.has(file)) {
+        tables.push({ path: file });
+      }
+    }
+    meta.tables = tables;
+    writeJson(metaPath, meta);
 
     games.push({
       id: metaId,

@@ -1,0 +1,15 @@
+{
+  "id": "Grand Theft Auto 4",
+  "title": "Grand Theft Auto 4",
+  "executables": [],
+  "steam_appid": "12210",
+  "exe_hashes": [],
+  "tables": [
+    {
+      "path": "GTAIV.CT"
+    },
+    {
+      "path": "GTAIVfrf.ct"
+    }
+  ]
+}

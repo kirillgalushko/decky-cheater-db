@@ -1,6 +1,13 @@
 {
   "games": [
     {
+      "id": "Grand Theft Auto 4",
+      "title": "Grand Theft Auto 4",
+      "executables": [],
+      "steam_appid": "12210",
+      "meta_path": "games/Grand Theft Auto 4/meta.json"
+    },
+    {
       "id": "kingdom-come-deliverance",
       "title": "Kingdom Come Deliverance",
       "executables": [
